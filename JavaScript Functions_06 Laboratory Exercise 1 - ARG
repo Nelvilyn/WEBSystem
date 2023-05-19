@@ -1,0 +1,66 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Lab.css">
+    <style>
+        .center {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          
+        }
+        </style>
+</head>
+<body>
+    <h1>"Check your Age"</h1>
+    <div class="center">
+        <button onclick="Sheesh()">Click Me!</button>
+      </div>
+    <p id="Result"></p>
+    <script src = "Age.js"></script>
+</body>
+</html>
+
+CSS
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+
+}
+
+h1 {
+    text-align: center;
+    color: black
+}
+
+button{
+    padding: 30px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+p{
+    text-align: center;
+}
+
+JS
+function Sheesh() {
+    var age = prompt("What is the age of your favorite artist?");
+    if (age < 25) {
+      document.getElementById("Result").innerHTML = "They're " + age + " old and they're younger than Google";
+    } else if (age == 25) {
+      document.getElementById("Result").innerHTML = "They're " + age + " and they're as old as Google";
+    } else {
+      alert("They're " + age + " and they're older than Google");
+    }
+  }
